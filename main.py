@@ -1,12 +1,14 @@
-# LED TEST
-#Start Script
+#by StSkanta (TechCree) 838375
+#1. main.py  Automatisches main.py wird gestartet - führt eine LED Sequenz aus um alle LEDs zu testen und startet dannach das buzzer.py Script
+
 import machine
 from machine import Pin
 import utime
 from machine import I2C
 import time
-import clock
+import buzzer
 import os
+
 
 #mainboard LED
 led25 =  Pin(25, Pin.OUT)
@@ -42,58 +44,23 @@ led19 = Pin(27, Pin.OUT) # std1 gelb (8)
 led20 = Pin(20, Pin.OUT) # std10 gelb (1)
 led21 = Pin(26, Pin.OUT) # std10 gelb (2)
 led22 = Pin(22, Pin.OUT) # std10 gelb (4)
-# std10 (8) gelb wird nicht benötigt
-#led26 = Pin(26, Pin.OUT) # std10 gelb (4)
-
-# Einzeln LED die zu testen ist
-#led20.value(1)
-#led21.value(1) ##
-#led26.value(1) ##
-
-#Alle an
-led00.value(1)
-led01.value(1)
-led02.value(1)
-led03.value(1)
-led04.value(1)
-led05.value(1)
-led06.value(1)
-led07.value(1)
-led08.value(1)
-led09.value(1)
-
-led10.value(1)
-led11.value(1)
-led12.value(1)
-led13.value(1)
-led14.value(1)
-
-led16.value(1)
-led17.value(1)
-led18.value(1)
-led19.value(1)
-
-led20.value(1)
-led21.value(1)
-led22.value(1)
-
-#Pause
-utime.sleep(5)
 
 #Alles aus
 led00.value(0)
 led01.value(0)
 led02.value(0)
 led03.value(0)
+
 led04.value(0)
 led05.value(0)
 led06.value(0)
 led07.value(0)
+
 led08.value(0)
 led09.value(0)
-
 led10.value(0)
 led11.value(0)
+
 led12.value(0)
 led13.value(0)
 led14.value(0)
@@ -107,5 +74,11 @@ led20.value(0)
 led21.value(0)
 led22.value(0)
 
-utime.sleep(3)
-exec(open('clock.py').read())
+#Welcome
+led14.value(1)
+led09.value(1)
+led13.value(1)
+led10.value(1)
+#utime.sleep(1)
+
+exec(open('buzzer.py').read())
