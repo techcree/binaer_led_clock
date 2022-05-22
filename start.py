@@ -1,11 +1,13 @@
-# LED TEST
+#by StSkanta (TechCree) 838375
+#Führt eine LED Startsequenz aus um alle LED zu testen und führt danach das main.py script aus
+
 #Start Script
 import machine
 from machine import Pin
 import utime
 from machine import I2C
 import time
-import main
+import clock
 import os
 
 #mainboard LED
@@ -51,6 +53,7 @@ led22 = Pin(22, Pin.OUT) # std10 gelb (4)
 #led26.value(1) ##
 
 #Alle an
+#EinerSekunden
 led00.value(1)
 utime.sleep(0.1)
 led01.value(1)
@@ -59,6 +62,8 @@ led02.value(1)
 utime.sleep(0.1)
 led03.value(1)
 utime.sleep(0.1)
+
+#Zehner Sekunden
 led04.value(1)
 utime.sleep(0.1)
 led05.value(1)
@@ -67,15 +72,18 @@ led06.value(1)
 utime.sleep(0.1)
 led07.value(1)
 utime.sleep(0.1)
+
+#Einer Minuten
 led08.value(1)
 utime.sleep(0.1)
 led09.value(1)
 utime.sleep(0.1)
-
 led10.value(1)
 utime.sleep(0.1)
 led11.value(1)
 utime.sleep(0.1)
+
+#Zehner Minuten
 led12.value(1)
 utime.sleep(0.1)
 led13.value(1)
@@ -83,51 +91,71 @@ utime.sleep(0.1)
 led14.value(1)
 utime.sleep(0.1)
 
+#Einer Stunden
 led16.value(1)
 utime.sleep(0.1)
 led17.value(1)
 utime.sleep(0.1)
 led18.value(1)
 utime.sleep(0.1)
-led19.value(1)
-utime.sleep(0.1)
-
 led20.value(1)
 utime.sleep(0.1)
+
+#Zehner Stunden
 led21.value(1)
 utime.sleep(0.1)
 led22.value(1)
 utime.sleep(0.1)
+led19.value(1)
+utime.sleep(0.1)
 
 #Pause
-utime.sleep(5)
+utime.sleep(1)
 
 #Alles aus
 led00.value(0)
+utime.sleep(0.1)
 led01.value(0)
+utime.sleep(0.1)
 led02.value(0)
+utime.sleep(0.1)
 led03.value(0)
+utime.sleep(0.1)
 led04.value(0)
+utime.sleep(0.1)
 led05.value(0)
+utime.sleep(0.1)
 led06.value(0)
+utime.sleep(0.1)
 led07.value(0)
+utime.sleep(0.1)
 led08.value(0)
+utime.sleep(0.1)
 led09.value(0)
-
+utime.sleep(0.1)
 led10.value(0)
+utime.sleep(0.1)
 led11.value(0)
+utime.sleep(0.1)
 led12.value(0)
+utime.sleep(0.1)
 led13.value(0)
+utime.sleep(0.1)
 led14.value(0)
-
+utime.sleep(0.1)
 led16.value(0)
+utime.sleep(0.1)
 led17.value(0)
+utime.sleep(0.1)
 led18.value(0)
+utime.sleep(0.1)
 led19.value(0)
-
+utime.sleep(0.1)
 led20.value(0)
+utime.sleep(0.1)
 led21.value(0)
+utime.sleep(0.1)
 led22.value(0)
 
-utime.sleep(3)
-exec(open('main.py').read())
+utime.sleep(1)
+exec(open('clock.py').read())
