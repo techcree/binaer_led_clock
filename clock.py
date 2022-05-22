@@ -8,8 +8,6 @@ import time
 import LEDtest
 import os
 
-#exec(open('LEDtest.py').read())
-
 address = 0x68
 register = 0x00
 #sec min hour week day mout year !!set time here#
@@ -549,6 +547,7 @@ while True:
 ##
     if stu == 10:        
         led20.value(1)
+        led16.value(1)
     if stu == 11:
         led20.value(1)
         led16.value(1)
